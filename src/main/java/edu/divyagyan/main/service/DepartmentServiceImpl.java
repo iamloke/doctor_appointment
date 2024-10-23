@@ -1,15 +1,21 @@
 package edu.divyagyan.main.service;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import org.springframework.stereotype.Service;
 
 import edu.divyagyan.main.entity.Department;
 
+@Service
 public class DepartmentServiceImpl implements DepartmentService {
 
 	@Override
 	public List<Department> getAllDepartments() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Department> departments = new ArrayList<>();
+		departments.add(new Department(1, "Cardiology"));
+		departments.add(new Department(2, "Neurology"));
+		return departments;
 	}
 
 	@Override

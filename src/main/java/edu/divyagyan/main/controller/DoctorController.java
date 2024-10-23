@@ -35,8 +35,8 @@ public class DoctorController {
 	}
 	
 	@PostMapping("/doctor")
-	public boolean registerDoctor(@RequestBody Doctor doctor) {
-		return doctorService.registerDoctor(doctor);
+	public boolean registerDoctor(@RequestBody Doctor newDoctor) {
+		return doctorService.registerDoctor(newDoctor);
 	}
 	
 	@PutMapping("/doctor/{id}")
